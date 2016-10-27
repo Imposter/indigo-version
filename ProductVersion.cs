@@ -32,7 +32,7 @@ namespace IndigoVersion
 
         public new string ToString()
         {
-            return $"{Major}.{Minor}.{Build}.{Revision}";
+            return string.Format("{0}.{1}.{2}.{3}", Major, Minor, Build, Revision);
         }
     }
 }
