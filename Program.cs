@@ -28,7 +28,7 @@ namespace IndigoVersion
             string dataDirectory = Path.GetFullPath(args[0]);
             string productName = Regex.Replace(args[1], "[^a-zA-Z0-9_]+", "", RegexOptions.Compiled);
 
-            Console.WriteLine($"Version directory: {dataDirectory}");
+            Console.WriteLine("Version directory: {0}", dataDirectory);
 
             // Open version config
             ProductVersion version = new ProductVersion();
