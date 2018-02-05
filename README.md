@@ -12,7 +12,7 @@ Command: `IndigoVersion.exe <directory> <product_name> <command>`
 
 ## License
 
-Copyright (C) 2016 Imposter. All Rights Reserved.
+Copyright (C) 2018 Imposter. All Rights Reserved.
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License

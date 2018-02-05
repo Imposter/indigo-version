@@ -1,10 +1,10 @@
 ﻿/*
 *
 *	Title: IndigoVersion
-*	Authors: Imposter (Eyaz Rehman) [http://www.igonline.eu]
+*	Authors: Imposter
 *	Date: 8/22/2015
 *
-*	Copyright (C) 2015 Indigo Games. All Rights Reserved.
+*	Copyright (C) 2018 Imposter. All Rights Reserved.
 *
 */
 
@@ -18,11 +18,11 @@ namespace IndigoVersion
     {
         public static bool Deserialize<T>(Stream stream, ref T obj)
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(T));
+            var serializer = new XmlSerializer(typeof(T));
 
             try
             {
-                XmlReader reader = XmlReader.Create(stream);
+                var reader = XmlReader.Create(stream);
                 obj = (T)serializer.Deserialize(reader);
                 return true;
             }
@@ -34,11 +34,11 @@ namespace IndigoVersion
 
         public static bool Serialize<T>(Stream stream, T obj)
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(T));
+            var serializer = new XmlSerializer(typeof(T));
 
             try
             {
-                XmlWriter writer = XmlWriter.Create(stream);
+                var writer = XmlWriter.Create(stream);
                 serializer.Serialize(writer, obj);
                 return true;
             }

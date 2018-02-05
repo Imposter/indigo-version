@@ -1,10 +1,10 @@
 ﻿/*
 *
 *	Title: IndigoVersion
-*	Authors: Imposter (Eyaz Rehman) [http://www.igonline.eu]
+*	Authors: Imposter
 *	Date: 8/22/2015
 *
-*	Copyright (C) 2015 Indigo Games. All Rights Reserved.
+*	Copyright (C) 2018 Imposter. All Rights Reserved.
 *
 */
 
@@ -12,10 +12,10 @@ namespace IndigoVersion
 {
     public class ProductVersion
     {
-        public int Major { get; set; }
-        public int Minor { get; set; }
-        public int Build { get; set; }
-        public int Revision { get; set; }
+        public int Major { get; }
+        public int Minor { get; }
+        public int Build { get; }
+        public int Revision { get; }
 
         public ProductVersion()
         {
@@ -32,7 +32,7 @@ namespace IndigoVersion
 
         public new string ToString()
         {
-            return string.Format("{0}.{1}.{2}.{3}", Major, Minor, Build, Revision);
+            return $"{Major}.{Minor}.{Build}.{Revision}";
         }
     }
 }
