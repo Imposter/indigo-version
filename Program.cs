@@ -76,7 +76,7 @@ namespace IndigoVersion
                     Xml.Serialize(fileStream, newVersion);
                 }
 
-                var versionFile = new StreamWriter(Path.Combine(dataDirectory, $"{versionString.ToLower()}.h"));
+                var versionFile = new StreamWriter(Path.Combine(dataDirectory, $"{productName}Version.h"));
 
                 versionFile.WriteLine("#ifndef {0}_VERSION_H", productName.ToUpper());
                 versionFile.WriteLine("#define {0}_VERSION_H", productName.ToUpper());
