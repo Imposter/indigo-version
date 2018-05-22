@@ -33,8 +33,8 @@ namespace IndigoVersion
             // Open version config
             var version = new ProductVersion();
             var versionNull = true;
-            var versionString = $"{productName.ToUpper()}_VERSION";
-            var versionInfo = $"{versionString.ToLower()}.xml";
+            var versionString = string.Format("{0}_VERSION", productName.ToUpper());
+            var versionInfo = string.Format("{0}.xml", versionString.ToLower());
             if (File.Exists(Path.Combine(dataDirectory, versionInfo)))
             {
                 using (var fileStream = File.OpenRead(Path.Combine(dataDirectory, versionInfo)))
@@ -76,7 +76,8 @@ namespace IndigoVersion
                     Xml.Serialize(fileStream, newVersion);
                 }
 
-                var versionFile = new StreamWriter(Path.Combine(dataDirectory, $"{productName}Version.h"));
+                var versionFile = new StreamWriter(Path.Combine(dataDirectory,
+                    string.Format("{0}Version.h", productName)));
 
                 versionFile.WriteLine("#ifndef {0}_VERSION_H", productName.ToUpper());
                 versionFile.WriteLine("#define {0}_VERSION_H", productName.ToUpper());
