@@ -12,10 +12,10 @@ namespace IndigoVersion
 {
     public class ProductVersion
     {
-        public int Major { get; }
-        public int Minor { get; }
-        public int Build { get; }
-        public int Revision { get; }
+        public int Major { get; private set; }
+        public int Minor { get; private set; }
+        public int Build { get; private set; }
+        public int Revision { get; private set; }
 
         public ProductVersion()
         {
@@ -32,7 +32,7 @@ namespace IndigoVersion
 
         public new string ToString()
         {
-            return $"{Major}.{Minor}.{Build}.{Revision}";
+            return string.Format("{0}.{1}.{2}.{3}", Major, Minor, Build, Revision);
         }
     }
 }
