@@ -33,8 +33,7 @@ namespace IndigoVersion
             // Open version config
             var version = new ProductVersion();
             var versionNull = true;
-            var versionString = string.Format("{0}_VERSION", productName.ToUpper());
-            var versionInfo = string.Format("{0}.xml", versionString.ToLower());
+            var versionInfo = string.Format("{0}Version.xml", productName);
             if (File.Exists(Path.Combine(dataDirectory, versionInfo)))
             {
                 using (var fileStream = File.OpenRead(Path.Combine(dataDirectory, versionInfo)))
